@@ -54,7 +54,7 @@ class Event(object):
         'location_name': 'str',
         'timezone': 'str',
         'website': 'str',
-        'first_event_id': 'int',
+        'first_event_id': 'str',
         'first_event_code': 'str',
         'webcasts': 'list[Webcast]',
         'division_keys': 'list[str]',
@@ -737,7 +737,7 @@ class Event(object):
         The FIRST internal Event ID, used to link to the event on the FRC webpage.
 
         :return: The first_event_id of this Event.
-        :rtype: int
+        :rtype: str
         """
         return self._first_event_id
 
@@ -748,7 +748,7 @@ class Event(object):
         The FIRST internal Event ID, used to link to the event on the FRC webpage.
 
         :param first_event_id: The first_event_id of this Event.
-        :type: int
+        :type: str
         """
 
         self._first_event_id = first_event_id

@@ -26,7 +26,7 @@ Name | Type | Description | Notes
 **location_name** | **str** | Name of the location at the address for the event, eg. Blue Alliance High School. | [optional] 
 **timezone** | **str** | Timezone name. | [optional] 
 **website** | **str** | The event&#39;s website, if any. | [optional] 
-**first_event_id** | **int** | The FIRST internal Event ID, used to link to the event on the FRC webpage. | [optional] 
+**first_event_id** | **str** | The FIRST internal Event ID, used to link to the event on the FRC webpage. | [optional] 
 **first_event_code** | **str** | Public facing event code used by FIRST (on frc-events.firstinspires.org, for example) | [optional] 
 **webcasts** | [**list[Webcast]**](Webcast.md) |  | [optional] 
 **division_keys** | **list[str]** | An array of event keys for the divisions at this event. | [optional] 
