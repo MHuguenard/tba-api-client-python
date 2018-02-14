@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **auto_points** | **int** |  | [optional] 
 **teleop_points** | **int** |  | [optional] 
-**breech_points** | **int** |  | [optional] 
+**breach_points** | **int** |  | [optional] 
 **foul_points** | **int** |  | [optional] 
 **capture_points** | **int** |  | [optional] 
 **adjust_points** | **int** |  | [optional] 
