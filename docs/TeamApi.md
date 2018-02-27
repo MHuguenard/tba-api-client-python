@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**get_event_teams**](TeamApi.md#get_event_teams) | **GET** /event/{event_key}/teams | 
 [**get_event_teams_keys**](TeamApi.md#get_event_teams_keys) | **GET** /event/{event_key}/teams/keys | 
 [**get_event_teams_simple**](TeamApi.md#get_event_teams_simple) | **GET** /event/{event_key}/teams/simple | 
+[**get_event_teams_statuses**](TeamApi.md#get_event_teams_statuses) | **GET** /event/{event_key}/teams/statuses | 
 [**get_team**](TeamApi.md#get_team) | **GET** /team/{team_key} | 
 [**get_team_awards**](TeamApi.md#get_team_awards) | **GET** /team/{team_key}/awards | 
 [**get_team_awards_by_year**](TeamApi.md#get_team_awards_by_year) | **GET** /team/{team_key}/awards/{year} | 
@@ -26,6 +27,7 @@ Method | HTTP request | Description
 [**get_team_events_by_year_simple**](TeamApi.md#get_team_events_by_year_simple) | **GET** /team/{team_key}/events/{year}/simple | 
 [**get_team_events_keys**](TeamApi.md#get_team_events_keys) | **GET** /team/{team_key}/events/keys | 
 [**get_team_events_simple**](TeamApi.md#get_team_events_simple) | **GET** /team/{team_key}/events/simple | 
+[**get_team_events_statuses_by_year**](TeamApi.md#get_team_events_statuses_by_year) | **GET** /team/{team_key}/events/{year}/statuses | 
 [**get_team_matches_by_year**](TeamApi.md#get_team_matches_by_year) | **GET** /team/{team_key}/matches/{year} | 
 [**get_team_matches_by_year_keys**](TeamApi.md#get_team_matches_by_year_keys) | **GET** /team/{team_key}/matches/{year}/keys | 
 [**get_team_matches_by_year_simple**](TeamApi.md#get_team_matches_by_year_simple) | **GET** /team/{team_key}/matches/{year}/simple | 
@@ -410,6 +412,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**list[TeamSimple]**](TeamSimple.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_event_teams_statuses**
+> dict(str, TeamEventStatus) get_event_teams_statuses(event_key, if_modified_since=if_modified_since)
+
+
+
+Gets a key-value list of the event statuses for teams competing at the given event.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import net.thefletcher.tbaapi.v3client
+from net.thefletcher.tbaapi.v3client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: apiKey
+net.thefletcher.tbaapi.v3client.configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# net.thefletcher.tbaapi.v3client.configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = net.thefletcher.tbaapi.v3client.TeamApi()
+event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
+
+try: 
+    api_response = api_instance.get_event_teams_statuses(event_key, if_modified_since=if_modified_since)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling TeamApi->get_event_teams_statuses: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **event_key** | **str**| TBA Event Key, eg &#x60;2016nytr&#x60; | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
+
+### Return type
+
+[**dict(str, TeamEventStatus)**](TeamEventStatus.md)
 
 ### Authorization
 
@@ -1238,6 +1294,62 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**list[EventSimple]**](EventSimple.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_team_events_statuses_by_year**
+> dict(str, TeamEventStatus) get_team_events_statuses_by_year(team_key, year, if_modified_since=if_modified_since)
+
+
+
+Gets a key-value list of the event statuses for events this team has competed at in the given year.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import net.thefletcher.tbaapi.v3client
+from net.thefletcher.tbaapi.v3client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: apiKey
+net.thefletcher.tbaapi.v3client.configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# net.thefletcher.tbaapi.v3client.configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = net.thefletcher.tbaapi.v3client.TeamApi()
+team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
+year = 3.4 # float | Competition Year (or Season). Must be 4 digits.
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
+
+try: 
+    api_response = api_instance.get_team_events_statuses_by_year(team_key, year, if_modified_since=if_modified_since)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling TeamApi->get_team_events_statuses_by_year: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **team_key** | **str**| TBA Team Key, eg &#x60;frc254&#x60; | 
+ **year** | **float**| Competition Year (or Season). Must be 4 digits. | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
+
+### Return type
+
+[**dict(str, TeamEventStatus)**](TeamEventStatus.md)
 
 ### Authorization
 
