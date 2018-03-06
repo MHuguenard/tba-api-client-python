@@ -503,11 +503,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_team_districts**
-> dict(str, str) get_team_districts(team_key, if_modified_since=if_modified_since)
+> list[DistrictList] get_team_districts(team_key, if_modified_since=if_modified_since)
 
 
 
-Gets a list or year and district pairs to denote each year the team was in a district. Will return an empty array if the team was never in a district.
+Gets an array of districts representing each year the team was in a district. Will return an empty array if the team was never in a district.
 
 ### Example 
 ```python
@@ -543,7 +543,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**dict(str, str)**](dict.md)
+[**list[DistrictList]**](DistrictList.md)
 
 ### Authorization
 
