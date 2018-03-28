@@ -643,7 +643,7 @@ net.thefletcher.tbaapi.v3client.configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_
 
 # create an instance of the API class
 api_instance = net.thefletcher.tbaapi.v3client.ListApi()
-year = 3.4 # float | Competition Year (or Season). Must be 4 digits.
+year = 56 # int | Competition Year (or Season). Must be 4 digits.
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try: 
@@ -657,7 +657,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **year** | **float**| Competition Year (or Season). Must be 4 digits. | 
+ **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
  **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
@@ -697,7 +697,7 @@ net.thefletcher.tbaapi.v3client.configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_
 
 # create an instance of the API class
 api_instance = net.thefletcher.tbaapi.v3client.ListApi()
-year = 3.4 # float | Competition Year (or Season). Must be 4 digits.
+year = 56 # int | Competition Year (or Season). Must be 4 digits.
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try: 
@@ -711,7 +711,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **year** | **float**| Competition Year (or Season). Must be 4 digits. | 
+ **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
  **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
@@ -751,7 +751,7 @@ net.thefletcher.tbaapi.v3client.configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_
 
 # create an instance of the API class
 api_instance = net.thefletcher.tbaapi.v3client.ListApi()
-year = 3.4 # float | Competition Year (or Season). Must be 4 digits.
+year = 56 # int | Competition Year (or Season). Must be 4 digits.
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try: 
@@ -765,7 +765,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **year** | **float**| Competition Year (or Season). Must be 4 digits. | 
+ **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
  **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
@@ -806,7 +806,7 @@ net.thefletcher.tbaapi.v3client.configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_
 # create an instance of the API class
 api_instance = net.thefletcher.tbaapi.v3client.ListApi()
 team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
-year = 3.4 # float | Competition Year (or Season). Must be 4 digits.
+year = 56 # int | Competition Year (or Season). Must be 4 digits.
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try: 
@@ -821,7 +821,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **team_key** | **str**| TBA Team Key, eg &#x60;frc254&#x60; | 
- **year** | **float**| Competition Year (or Season). Must be 4 digits. | 
+ **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
  **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
@@ -861,7 +861,7 @@ net.thefletcher.tbaapi.v3client.configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_
 
 # create an instance of the API class
 api_instance = net.thefletcher.tbaapi.v3client.ListApi()
-page_num = 3.4 # float | Page number of results to return, zero-indexed
+page_num = 56 # int | Page number of results to return, zero-indexed
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try: 
@@ -875,7 +875,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_num** | **float**| Page number of results to return, zero-indexed | 
+ **page_num** | **int**| Page number of results to return, zero-indexed | 
  **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
@@ -915,8 +915,8 @@ net.thefletcher.tbaapi.v3client.configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_
 
 # create an instance of the API class
 api_instance = net.thefletcher.tbaapi.v3client.ListApi()
-year = 3.4 # float | Competition Year (or Season). Must be 4 digits.
-page_num = 3.4 # float | Page number of results to return, zero-indexed
+year = 56 # int | Competition Year (or Season). Must be 4 digits.
+page_num = 56 # int | Page number of results to return, zero-indexed
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try: 
@@ -930,8 +930,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **year** | **float**| Competition Year (or Season). Must be 4 digits. | 
- **page_num** | **float**| Page number of results to return, zero-indexed | 
+ **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
+ **page_num** | **int**| Page number of results to return, zero-indexed | 
  **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
@@ -971,8 +971,8 @@ net.thefletcher.tbaapi.v3client.configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_
 
 # create an instance of the API class
 api_instance = net.thefletcher.tbaapi.v3client.ListApi()
-year = 3.4 # float | Competition Year (or Season). Must be 4 digits.
-page_num = 3.4 # float | Page number of results to return, zero-indexed
+year = 56 # int | Competition Year (or Season). Must be 4 digits.
+page_num = 56 # int | Page number of results to return, zero-indexed
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try: 
@@ -986,8 +986,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **year** | **float**| Competition Year (or Season). Must be 4 digits. | 
- **page_num** | **float**| Page number of results to return, zero-indexed | 
+ **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
+ **page_num** | **int**| Page number of results to return, zero-indexed | 
  **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
@@ -1027,8 +1027,8 @@ net.thefletcher.tbaapi.v3client.configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_
 
 # create an instance of the API class
 api_instance = net.thefletcher.tbaapi.v3client.ListApi()
-year = 3.4 # float | Competition Year (or Season). Must be 4 digits.
-page_num = 3.4 # float | Page number of results to return, zero-indexed
+year = 56 # int | Competition Year (or Season). Must be 4 digits.
+page_num = 56 # int | Page number of results to return, zero-indexed
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try: 
@@ -1042,8 +1042,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **year** | **float**| Competition Year (or Season). Must be 4 digits. | 
- **page_num** | **float**| Page number of results to return, zero-indexed | 
+ **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
+ **page_num** | **int**| Page number of results to return, zero-indexed | 
  **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
@@ -1083,7 +1083,7 @@ net.thefletcher.tbaapi.v3client.configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_
 
 # create an instance of the API class
 api_instance = net.thefletcher.tbaapi.v3client.ListApi()
-page_num = 3.4 # float | Page number of results to return, zero-indexed
+page_num = 56 # int | Page number of results to return, zero-indexed
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try: 
@@ -1097,7 +1097,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_num** | **float**| Page number of results to return, zero-indexed | 
+ **page_num** | **int**| Page number of results to return, zero-indexed | 
  **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
@@ -1137,7 +1137,7 @@ net.thefletcher.tbaapi.v3client.configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_
 
 # create an instance of the API class
 api_instance = net.thefletcher.tbaapi.v3client.ListApi()
-page_num = 3.4 # float | Page number of results to return, zero-indexed
+page_num = 56 # int | Page number of results to return, zero-indexed
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try: 
@@ -1151,7 +1151,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_num** | **float**| Page number of results to return, zero-indexed | 
+ **page_num** | **int**| Page number of results to return, zero-indexed | 
  **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type

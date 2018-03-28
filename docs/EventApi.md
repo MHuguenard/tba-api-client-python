@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**get_event_awards**](EventApi.md#get_event_awards) | **GET** /event/{event_key}/awards | 
 [**get_event_district_points**](EventApi.md#get_event_district_points) | **GET** /event/{event_key}/district_points | 
 [**get_event_insights**](EventApi.md#get_event_insights) | **GET** /event/{event_key}/insights | 
+[**get_event_match_timeseries**](EventApi.md#get_event_match_timeseries) | **GET** /event/{event_key}/matches/timeseries | 
 [**get_event_matches**](EventApi.md#get_event_matches) | **GET** /event/{event_key}/matches | 
 [**get_event_matches_keys**](EventApi.md#get_event_matches_keys) | **GET** /event/{event_key}/matches/keys | 
 [**get_event_matches_simple**](EventApi.md#get_event_matches_simple) | **GET** /event/{event_key}/matches/simple | 
@@ -460,6 +461,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 **object**
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_event_match_timeseries**
+> list[str] get_event_match_timeseries(event_key, if_modified_since=if_modified_since)
+
+
+
+Gets an array of Match Keys for the given event key that have timeseries data. Returns an empty array if no matches have timeseries data. *WARNING:* This is *not* official data, and is subject to a significant possibility of error, or missing data. Do not rely on this data for any purpose. In fact, pretend we made it up. *WARNING:* This endpoint and corresponding data models are under *active development* and may change at any time, including in breaking ways.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import net.thefletcher.tbaapi.v3client
+from net.thefletcher.tbaapi.v3client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: apiKey
+net.thefletcher.tbaapi.v3client.configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# net.thefletcher.tbaapi.v3client.configuration.api_key_prefix['X-TBA-Auth-Key'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = net.thefletcher.tbaapi.v3client.EventApi()
+event_key = 'event_key_example' # str | TBA Event Key, eg `2016nytr`
+if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
+
+try: 
+    api_response = api_instance.get_event_match_timeseries(event_key, if_modified_since=if_modified_since)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling EventApi->get_event_match_timeseries: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **event_key** | **str**| TBA Event Key, eg &#x60;2016nytr&#x60; | 
+ **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
+
+### Return type
+
+**list[str]**
 
 ### Authorization
 
@@ -1088,7 +1143,7 @@ net.thefletcher.tbaapi.v3client.configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_
 
 # create an instance of the API class
 api_instance = net.thefletcher.tbaapi.v3client.EventApi()
-year = 3.4 # float | Competition Year (or Season). Must be 4 digits.
+year = 56 # int | Competition Year (or Season). Must be 4 digits.
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try: 
@@ -1102,7 +1157,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **year** | **float**| Competition Year (or Season). Must be 4 digits. | 
+ **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
  **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
@@ -1142,7 +1197,7 @@ net.thefletcher.tbaapi.v3client.configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_
 
 # create an instance of the API class
 api_instance = net.thefletcher.tbaapi.v3client.EventApi()
-year = 3.4 # float | Competition Year (or Season). Must be 4 digits.
+year = 56 # int | Competition Year (or Season). Must be 4 digits.
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try: 
@@ -1156,7 +1211,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **year** | **float**| Competition Year (or Season). Must be 4 digits. | 
+ **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
  **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
@@ -1196,7 +1251,7 @@ net.thefletcher.tbaapi.v3client.configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_
 
 # create an instance of the API class
 api_instance = net.thefletcher.tbaapi.v3client.EventApi()
-year = 3.4 # float | Competition Year (or Season). Must be 4 digits.
+year = 56 # int | Competition Year (or Season). Must be 4 digits.
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try: 
@@ -1210,7 +1265,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **year** | **float**| Competition Year (or Season). Must be 4 digits. | 
+ **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
  **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
@@ -1585,7 +1640,7 @@ net.thefletcher.tbaapi.v3client.configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_
 # create an instance of the API class
 api_instance = net.thefletcher.tbaapi.v3client.EventApi()
 team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
-year = 3.4 # float | Competition Year (or Season). Must be 4 digits.
+year = 56 # int | Competition Year (or Season). Must be 4 digits.
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try: 
@@ -1600,7 +1655,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **team_key** | **str**| TBA Team Key, eg &#x60;frc254&#x60; | 
- **year** | **float**| Competition Year (or Season). Must be 4 digits. | 
+ **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
  **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
@@ -1641,7 +1696,7 @@ net.thefletcher.tbaapi.v3client.configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_
 # create an instance of the API class
 api_instance = net.thefletcher.tbaapi.v3client.EventApi()
 team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
-year = 3.4 # float | Competition Year (or Season). Must be 4 digits.
+year = 56 # int | Competition Year (or Season). Must be 4 digits.
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try: 
@@ -1656,7 +1711,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **team_key** | **str**| TBA Team Key, eg &#x60;frc254&#x60; | 
- **year** | **float**| Competition Year (or Season). Must be 4 digits. | 
+ **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
  **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
@@ -1697,7 +1752,7 @@ net.thefletcher.tbaapi.v3client.configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_
 # create an instance of the API class
 api_instance = net.thefletcher.tbaapi.v3client.EventApi()
 team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
-year = 3.4 # float | Competition Year (or Season). Must be 4 digits.
+year = 56 # int | Competition Year (or Season). Must be 4 digits.
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try: 
@@ -1712,7 +1767,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **team_key** | **str**| TBA Team Key, eg &#x60;frc254&#x60; | 
- **year** | **float**| Competition Year (or Season). Must be 4 digits. | 
+ **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
  **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
@@ -1861,7 +1916,7 @@ net.thefletcher.tbaapi.v3client.configuration.api_key['X-TBA-Auth-Key'] = 'YOUR_
 # create an instance of the API class
 api_instance = net.thefletcher.tbaapi.v3client.EventApi()
 team_key = 'team_key_example' # str | TBA Team Key, eg `frc254`
-year = 3.4 # float | Competition Year (or Season). Must be 4 digits.
+year = 56 # int | Competition Year (or Season). Must be 4 digits.
 if_modified_since = 'if_modified_since_example' # str | Value of the `Last-Modified` header in the most recently cached response by the client. (optional)
 
 try: 
@@ -1876,7 +1931,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **team_key** | **str**| TBA Team Key, eg &#x60;frc254&#x60; | 
- **year** | **float**| Competition Year (or Season). Must be 4 digits. | 
+ **year** | **int**| Competition Year (or Season). Must be 4 digits. | 
  **if_modified_since** | **str**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] 
 
 ### Return type
