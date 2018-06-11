@@ -420,7 +420,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_event_insights**
-> object get_event_insights(event_key, if_modified_since=if_modified_since)
+> EventInsights get_event_insights(event_key, if_modified_since=if_modified_since)
 
 
 
@@ -460,7 +460,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**EventInsights**](EventInsights.md)
 
 ### Authorization
 

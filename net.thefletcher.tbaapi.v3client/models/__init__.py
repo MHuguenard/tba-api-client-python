@@ -28,10 +28,10 @@ from .event import Event
 from .event_district_points import EventDistrictPoints
 from .event_district_points_points import EventDistrictPointsPoints
 from .event_district_points_tiebreakers import EventDistrictPointsTiebreakers
+from .event_insights import EventInsights
 from .event_insights_2016 import EventInsights2016
-from .event_insights_2016_detail import EventInsights2016Detail
 from .event_insights_2017 import EventInsights2017
-from .event_insights_2017_detail import EventInsights2017Detail
+from .event_insights_2018 import EventInsights2018
 from .event_op_rs import EventOPRs
 from .event_predictions import EventPredictions
 from .event_ranking import EventRanking

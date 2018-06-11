@@ -31,69 +31,945 @@ class EventInsights2017(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'qual': 'EventInsights2017Detail',
-        'playoff': 'EventInsights2017Detail'
+        'average_foul_score': 'float',
+        'average_fuel_points': 'float',
+        'average_fuel_points_auto': 'float',
+        'average_fuel_points_teleop': 'float',
+        'average_high_goals': 'float',
+        'average_high_goals_auto': 'float',
+        'average_high_goals_teleop': 'float',
+        'average_low_goals': 'float',
+        'average_low_goals_auto': 'float',
+        'average_low_goals_teleop': 'float',
+        'average_mobility_points_auto': 'float',
+        'average_points_auto': 'float',
+        'average_points_teleop': 'float',
+        'average_rotor_points': 'float',
+        'average_rotor_points_auto': 'float',
+        'average_rotor_points_teleop': 'float',
+        'average_score': 'float',
+        'average_takeoff_points_teleop': 'float',
+        'average_win_margin': 'float',
+        'average_win_score': 'float',
+        'high_kpa': 'list[str]',
+        'high_score': 'list[str]',
+        'kpa_achieved': 'list[float]',
+        'mobility_counts': 'list[float]',
+        'rotor_1_engaged': 'list[float]',
+        'rotor_1_engaged_auto': 'list[float]',
+        'rotor_2_engaged': 'list[float]',
+        'rotor_2_engaged_auto': 'list[float]',
+        'rotor_3_engaged': 'list[float]',
+        'rotor_4_engaged': 'list[float]',
+        'takeoff_counts': 'list[float]',
+        'unicorn_matches': 'list[float]'
     }
 
     attribute_map = {
-        'qual': 'qual',
-        'playoff': 'playoff'
+        'average_foul_score': 'average_foul_score',
+        'average_fuel_points': 'average_fuel_points',
+        'average_fuel_points_auto': 'average_fuel_points_auto',
+        'average_fuel_points_teleop': 'average_fuel_points_teleop',
+        'average_high_goals': 'average_high_goals',
+        'average_high_goals_auto': 'average_high_goals_auto',
+        'average_high_goals_teleop': 'average_high_goals_teleop',
+        'average_low_goals': 'average_low_goals',
+        'average_low_goals_auto': 'average_low_goals_auto',
+        'average_low_goals_teleop': 'average_low_goals_teleop',
+        'average_mobility_points_auto': 'average_mobility_points_auto',
+        'average_points_auto': 'average_points_auto',
+        'average_points_teleop': 'average_points_teleop',
+        'average_rotor_points': 'average_rotor_points',
+        'average_rotor_points_auto': 'average_rotor_points_auto',
+        'average_rotor_points_teleop': 'average_rotor_points_teleop',
+        'average_score': 'average_score',
+        'average_takeoff_points_teleop': 'average_takeoff_points_teleop',
+        'average_win_margin': 'average_win_margin',
+        'average_win_score': 'average_win_score',
+        'high_kpa': 'high_kpa',
+        'high_score': 'high_score',
+        'kpa_achieved': 'kpa_achieved',
+        'mobility_counts': 'mobility_counts',
+        'rotor_1_engaged': 'rotor_1_engaged',
+        'rotor_1_engaged_auto': 'rotor_1_engaged_auto',
+        'rotor_2_engaged': 'rotor_2_engaged',
+        'rotor_2_engaged_auto': 'rotor_2_engaged_auto',
+        'rotor_3_engaged': 'rotor_3_engaged',
+        'rotor_4_engaged': 'rotor_4_engaged',
+        'takeoff_counts': 'takeoff_counts',
+        'unicorn_matches': 'unicorn_matches'
     }
 
-    def __init__(self, qual=None, playoff=None):
+    def __init__(self, average_foul_score=None, average_fuel_points=None, average_fuel_points_auto=None, average_fuel_points_teleop=None, average_high_goals=None, average_high_goals_auto=None, average_high_goals_teleop=None, average_low_goals=None, average_low_goals_auto=None, average_low_goals_teleop=None, average_mobility_points_auto=None, average_points_auto=None, average_points_teleop=None, average_rotor_points=None, average_rotor_points_auto=None, average_rotor_points_teleop=None, average_score=None, average_takeoff_points_teleop=None, average_win_margin=None, average_win_score=None, high_kpa=None, high_score=None, kpa_achieved=None, mobility_counts=None, rotor_1_engaged=None, rotor_1_engaged_auto=None, rotor_2_engaged=None, rotor_2_engaged_auto=None, rotor_3_engaged=None, rotor_4_engaged=None, takeoff_counts=None, unicorn_matches=None):
         """
         EventInsights2017 - a model defined in Swagger
         """
 
-        self._qual = None
-        self._playoff = None
+        self._average_foul_score = None
+        self._average_fuel_points = None
+        self._average_fuel_points_auto = None
+        self._average_fuel_points_teleop = None
+        self._average_high_goals = None
+        self._average_high_goals_auto = None
+        self._average_high_goals_teleop = None
+        self._average_low_goals = None
+        self._average_low_goals_auto = None
+        self._average_low_goals_teleop = None
+        self._average_mobility_points_auto = None
+        self._average_points_auto = None
+        self._average_points_teleop = None
+        self._average_rotor_points = None
+        self._average_rotor_points_auto = None
+        self._average_rotor_points_teleop = None
+        self._average_score = None
+        self._average_takeoff_points_teleop = None
+        self._average_win_margin = None
+        self._average_win_score = None
+        self._high_kpa = None
+        self._high_score = None
+        self._kpa_achieved = None
+        self._mobility_counts = None
+        self._rotor_1_engaged = None
+        self._rotor_1_engaged_auto = None
+        self._rotor_2_engaged = None
+        self._rotor_2_engaged_auto = None
+        self._rotor_3_engaged = None
+        self._rotor_4_engaged = None
+        self._takeoff_counts = None
+        self._unicorn_matches = None
 
-        if qual is not None:
-          self.qual = qual
-        if playoff is not None:
-          self.playoff = playoff
+        self.average_foul_score = average_foul_score
+        self.average_fuel_points = average_fuel_points
+        self.average_fuel_points_auto = average_fuel_points_auto
+        self.average_fuel_points_teleop = average_fuel_points_teleop
+        self.average_high_goals = average_high_goals
+        self.average_high_goals_auto = average_high_goals_auto
+        self.average_high_goals_teleop = average_high_goals_teleop
+        self.average_low_goals = average_low_goals
+        self.average_low_goals_auto = average_low_goals_auto
+        self.average_low_goals_teleop = average_low_goals_teleop
+        self.average_mobility_points_auto = average_mobility_points_auto
+        self.average_points_auto = average_points_auto
+        self.average_points_teleop = average_points_teleop
+        self.average_rotor_points = average_rotor_points
+        self.average_rotor_points_auto = average_rotor_points_auto
+        self.average_rotor_points_teleop = average_rotor_points_teleop
+        self.average_score = average_score
+        self.average_takeoff_points_teleop = average_takeoff_points_teleop
+        self.average_win_margin = average_win_margin
+        self.average_win_score = average_win_score
+        self.high_kpa = high_kpa
+        self.high_score = high_score
+        self.kpa_achieved = kpa_achieved
+        self.mobility_counts = mobility_counts
+        self.rotor_1_engaged = rotor_1_engaged
+        self.rotor_1_engaged_auto = rotor_1_engaged_auto
+        self.rotor_2_engaged = rotor_2_engaged
+        self.rotor_2_engaged_auto = rotor_2_engaged_auto
+        self.rotor_3_engaged = rotor_3_engaged
+        self.rotor_4_engaged = rotor_4_engaged
+        self.takeoff_counts = takeoff_counts
+        self.unicorn_matches = unicorn_matches
 
     @property
-    def qual(self):
+    def average_foul_score(self):
         """
-        Gets the qual of this EventInsights2017.
+        Gets the average_foul_score of this EventInsights2017.
+        Average foul score.
 
-        :return: The qual of this EventInsights2017.
-        :rtype: EventInsights2017Detail
+        :return: The average_foul_score of this EventInsights2017.
+        :rtype: float
         """
-        return self._qual
+        return self._average_foul_score
 
-    @qual.setter
-    def qual(self, qual):
+    @average_foul_score.setter
+    def average_foul_score(self, average_foul_score):
         """
-        Sets the qual of this EventInsights2017.
+        Sets the average_foul_score of this EventInsights2017.
+        Average foul score.
 
-        :param qual: The qual of this EventInsights2017.
-        :type: EventInsights2017Detail
+        :param average_foul_score: The average_foul_score of this EventInsights2017.
+        :type: float
         """
+        if average_foul_score is None:
+            raise ValueError("Invalid value for `average_foul_score`, must not be `None`")
 
-        self._qual = qual
+        self._average_foul_score = average_foul_score
 
     @property
-    def playoff(self):
+    def average_fuel_points(self):
         """
-        Gets the playoff of this EventInsights2017.
+        Gets the average_fuel_points of this EventInsights2017.
+        Average fuel points scored.
 
-        :return: The playoff of this EventInsights2017.
-        :rtype: EventInsights2017Detail
+        :return: The average_fuel_points of this EventInsights2017.
+        :rtype: float
         """
-        return self._playoff
+        return self._average_fuel_points
 
-    @playoff.setter
-    def playoff(self, playoff):
+    @average_fuel_points.setter
+    def average_fuel_points(self, average_fuel_points):
         """
-        Sets the playoff of this EventInsights2017.
+        Sets the average_fuel_points of this EventInsights2017.
+        Average fuel points scored.
 
-        :param playoff: The playoff of this EventInsights2017.
-        :type: EventInsights2017Detail
+        :param average_fuel_points: The average_fuel_points of this EventInsights2017.
+        :type: float
         """
+        if average_fuel_points is None:
+            raise ValueError("Invalid value for `average_fuel_points`, must not be `None`")
 
-        self._playoff = playoff
+        self._average_fuel_points = average_fuel_points
+
+    @property
+    def average_fuel_points_auto(self):
+        """
+        Gets the average_fuel_points_auto of this EventInsights2017.
+        Average fuel points scored during auto.
+
+        :return: The average_fuel_points_auto of this EventInsights2017.
+        :rtype: float
+        """
+        return self._average_fuel_points_auto
+
+    @average_fuel_points_auto.setter
+    def average_fuel_points_auto(self, average_fuel_points_auto):
+        """
+        Sets the average_fuel_points_auto of this EventInsights2017.
+        Average fuel points scored during auto.
+
+        :param average_fuel_points_auto: The average_fuel_points_auto of this EventInsights2017.
+        :type: float
+        """
+        if average_fuel_points_auto is None:
+            raise ValueError("Invalid value for `average_fuel_points_auto`, must not be `None`")
+
+        self._average_fuel_points_auto = average_fuel_points_auto
+
+    @property
+    def average_fuel_points_teleop(self):
+        """
+        Gets the average_fuel_points_teleop of this EventInsights2017.
+        Average fuel points scored during teleop.
+
+        :return: The average_fuel_points_teleop of this EventInsights2017.
+        :rtype: float
+        """
+        return self._average_fuel_points_teleop
+
+    @average_fuel_points_teleop.setter
+    def average_fuel_points_teleop(self, average_fuel_points_teleop):
+        """
+        Sets the average_fuel_points_teleop of this EventInsights2017.
+        Average fuel points scored during teleop.
+
+        :param average_fuel_points_teleop: The average_fuel_points_teleop of this EventInsights2017.
+        :type: float
+        """
+        if average_fuel_points_teleop is None:
+            raise ValueError("Invalid value for `average_fuel_points_teleop`, must not be `None`")
+
+        self._average_fuel_points_teleop = average_fuel_points_teleop
+
+    @property
+    def average_high_goals(self):
+        """
+        Gets the average_high_goals of this EventInsights2017.
+        Average points scored in the high goal.
+
+        :return: The average_high_goals of this EventInsights2017.
+        :rtype: float
+        """
+        return self._average_high_goals
+
+    @average_high_goals.setter
+    def average_high_goals(self, average_high_goals):
+        """
+        Sets the average_high_goals of this EventInsights2017.
+        Average points scored in the high goal.
+
+        :param average_high_goals: The average_high_goals of this EventInsights2017.
+        :type: float
+        """
+        if average_high_goals is None:
+            raise ValueError("Invalid value for `average_high_goals`, must not be `None`")
+
+        self._average_high_goals = average_high_goals
+
+    @property
+    def average_high_goals_auto(self):
+        """
+        Gets the average_high_goals_auto of this EventInsights2017.
+        Average points scored in the high goal during auto.
+
+        :return: The average_high_goals_auto of this EventInsights2017.
+        :rtype: float
+        """
+        return self._average_high_goals_auto
+
+    @average_high_goals_auto.setter
+    def average_high_goals_auto(self, average_high_goals_auto):
+        """
+        Sets the average_high_goals_auto of this EventInsights2017.
+        Average points scored in the high goal during auto.
+
+        :param average_high_goals_auto: The average_high_goals_auto of this EventInsights2017.
+        :type: float
+        """
+        if average_high_goals_auto is None:
+            raise ValueError("Invalid value for `average_high_goals_auto`, must not be `None`")
+
+        self._average_high_goals_auto = average_high_goals_auto
+
+    @property
+    def average_high_goals_teleop(self):
+        """
+        Gets the average_high_goals_teleop of this EventInsights2017.
+        Average points scored in the high goal during teleop.
+
+        :return: The average_high_goals_teleop of this EventInsights2017.
+        :rtype: float
+        """
+        return self._average_high_goals_teleop
+
+    @average_high_goals_teleop.setter
+    def average_high_goals_teleop(self, average_high_goals_teleop):
+        """
+        Sets the average_high_goals_teleop of this EventInsights2017.
+        Average points scored in the high goal during teleop.
+
+        :param average_high_goals_teleop: The average_high_goals_teleop of this EventInsights2017.
+        :type: float
+        """
+        if average_high_goals_teleop is None:
+            raise ValueError("Invalid value for `average_high_goals_teleop`, must not be `None`")
+
+        self._average_high_goals_teleop = average_high_goals_teleop
+
+    @property
+    def average_low_goals(self):
+        """
+        Gets the average_low_goals of this EventInsights2017.
+        Average points scored in the low goal.
+
+        :return: The average_low_goals of this EventInsights2017.
+        :rtype: float
+        """
+        return self._average_low_goals
+
+    @average_low_goals.setter
+    def average_low_goals(self, average_low_goals):
+        """
+        Sets the average_low_goals of this EventInsights2017.
+        Average points scored in the low goal.
+
+        :param average_low_goals: The average_low_goals of this EventInsights2017.
+        :type: float
+        """
+        if average_low_goals is None:
+            raise ValueError("Invalid value for `average_low_goals`, must not be `None`")
+
+        self._average_low_goals = average_low_goals
+
+    @property
+    def average_low_goals_auto(self):
+        """
+        Gets the average_low_goals_auto of this EventInsights2017.
+        Average points scored in the low goal during auto.
+
+        :return: The average_low_goals_auto of this EventInsights2017.
+        :rtype: float
+        """
+        return self._average_low_goals_auto
+
+    @average_low_goals_auto.setter
+    def average_low_goals_auto(self, average_low_goals_auto):
+        """
+        Sets the average_low_goals_auto of this EventInsights2017.
+        Average points scored in the low goal during auto.
+
+        :param average_low_goals_auto: The average_low_goals_auto of this EventInsights2017.
+        :type: float
+        """
+        if average_low_goals_auto is None:
+            raise ValueError("Invalid value for `average_low_goals_auto`, must not be `None`")
+
+        self._average_low_goals_auto = average_low_goals_auto
+
+    @property
+    def average_low_goals_teleop(self):
+        """
+        Gets the average_low_goals_teleop of this EventInsights2017.
+        Average points scored in the low goal during teleop.
+
+        :return: The average_low_goals_teleop of this EventInsights2017.
+        :rtype: float
+        """
+        return self._average_low_goals_teleop
+
+    @average_low_goals_teleop.setter
+    def average_low_goals_teleop(self, average_low_goals_teleop):
+        """
+        Sets the average_low_goals_teleop of this EventInsights2017.
+        Average points scored in the low goal during teleop.
+
+        :param average_low_goals_teleop: The average_low_goals_teleop of this EventInsights2017.
+        :type: float
+        """
+        if average_low_goals_teleop is None:
+            raise ValueError("Invalid value for `average_low_goals_teleop`, must not be `None`")
+
+        self._average_low_goals_teleop = average_low_goals_teleop
+
+    @property
+    def average_mobility_points_auto(self):
+        """
+        Gets the average_mobility_points_auto of this EventInsights2017.
+        Average mobility points scored during auto.
+
+        :return: The average_mobility_points_auto of this EventInsights2017.
+        :rtype: float
+        """
+        return self._average_mobility_points_auto
+
+    @average_mobility_points_auto.setter
+    def average_mobility_points_auto(self, average_mobility_points_auto):
+        """
+        Sets the average_mobility_points_auto of this EventInsights2017.
+        Average mobility points scored during auto.
+
+        :param average_mobility_points_auto: The average_mobility_points_auto of this EventInsights2017.
+        :type: float
+        """
+        if average_mobility_points_auto is None:
+            raise ValueError("Invalid value for `average_mobility_points_auto`, must not be `None`")
+
+        self._average_mobility_points_auto = average_mobility_points_auto
+
+    @property
+    def average_points_auto(self):
+        """
+        Gets the average_points_auto of this EventInsights2017.
+        Average points scored during auto.
+
+        :return: The average_points_auto of this EventInsights2017.
+        :rtype: float
+        """
+        return self._average_points_auto
+
+    @average_points_auto.setter
+    def average_points_auto(self, average_points_auto):
+        """
+        Sets the average_points_auto of this EventInsights2017.
+        Average points scored during auto.
+
+        :param average_points_auto: The average_points_auto of this EventInsights2017.
+        :type: float
+        """
+        if average_points_auto is None:
+            raise ValueError("Invalid value for `average_points_auto`, must not be `None`")
+
+        self._average_points_auto = average_points_auto
+
+    @property
+    def average_points_teleop(self):
+        """
+        Gets the average_points_teleop of this EventInsights2017.
+        Average points scored during teleop.
+
+        :return: The average_points_teleop of this EventInsights2017.
+        :rtype: float
+        """
+        return self._average_points_teleop
+
+    @average_points_teleop.setter
+    def average_points_teleop(self, average_points_teleop):
+        """
+        Sets the average_points_teleop of this EventInsights2017.
+        Average points scored during teleop.
+
+        :param average_points_teleop: The average_points_teleop of this EventInsights2017.
+        :type: float
+        """
+        if average_points_teleop is None:
+            raise ValueError("Invalid value for `average_points_teleop`, must not be `None`")
+
+        self._average_points_teleop = average_points_teleop
+
+    @property
+    def average_rotor_points(self):
+        """
+        Gets the average_rotor_points of this EventInsights2017.
+        Average rotor points scored.
+
+        :return: The average_rotor_points of this EventInsights2017.
+        :rtype: float
+        """
+        return self._average_rotor_points
+
+    @average_rotor_points.setter
+    def average_rotor_points(self, average_rotor_points):
+        """
+        Sets the average_rotor_points of this EventInsights2017.
+        Average rotor points scored.
+
+        :param average_rotor_points: The average_rotor_points of this EventInsights2017.
+        :type: float
+        """
+        if average_rotor_points is None:
+            raise ValueError("Invalid value for `average_rotor_points`, must not be `None`")
+
+        self._average_rotor_points = average_rotor_points
+
+    @property
+    def average_rotor_points_auto(self):
+        """
+        Gets the average_rotor_points_auto of this EventInsights2017.
+        Average rotor points scored during auto.
+
+        :return: The average_rotor_points_auto of this EventInsights2017.
+        :rtype: float
+        """
+        return self._average_rotor_points_auto
+
+    @average_rotor_points_auto.setter
+    def average_rotor_points_auto(self, average_rotor_points_auto):
+        """
+        Sets the average_rotor_points_auto of this EventInsights2017.
+        Average rotor points scored during auto.
+
+        :param average_rotor_points_auto: The average_rotor_points_auto of this EventInsights2017.
+        :type: float
+        """
+        if average_rotor_points_auto is None:
+            raise ValueError("Invalid value for `average_rotor_points_auto`, must not be `None`")
+
+        self._average_rotor_points_auto = average_rotor_points_auto
+
+    @property
+    def average_rotor_points_teleop(self):
+        """
+        Gets the average_rotor_points_teleop of this EventInsights2017.
+        Average rotor points scored during teleop.
+
+        :return: The average_rotor_points_teleop of this EventInsights2017.
+        :rtype: float
+        """
+        return self._average_rotor_points_teleop
+
+    @average_rotor_points_teleop.setter
+    def average_rotor_points_teleop(self, average_rotor_points_teleop):
+        """
+        Sets the average_rotor_points_teleop of this EventInsights2017.
+        Average rotor points scored during teleop.
+
+        :param average_rotor_points_teleop: The average_rotor_points_teleop of this EventInsights2017.
+        :type: float
+        """
+        if average_rotor_points_teleop is None:
+            raise ValueError("Invalid value for `average_rotor_points_teleop`, must not be `None`")
+
+        self._average_rotor_points_teleop = average_rotor_points_teleop
+
+    @property
+    def average_score(self):
+        """
+        Gets the average_score of this EventInsights2017.
+        Average score.
+
+        :return: The average_score of this EventInsights2017.
+        :rtype: float
+        """
+        return self._average_score
+
+    @average_score.setter
+    def average_score(self, average_score):
+        """
+        Sets the average_score of this EventInsights2017.
+        Average score.
+
+        :param average_score: The average_score of this EventInsights2017.
+        :type: float
+        """
+        if average_score is None:
+            raise ValueError("Invalid value for `average_score`, must not be `None`")
+
+        self._average_score = average_score
+
+    @property
+    def average_takeoff_points_teleop(self):
+        """
+        Gets the average_takeoff_points_teleop of this EventInsights2017.
+        Average takeoff points scored during teleop.
+
+        :return: The average_takeoff_points_teleop of this EventInsights2017.
+        :rtype: float
+        """
+        return self._average_takeoff_points_teleop
+
+    @average_takeoff_points_teleop.setter
+    def average_takeoff_points_teleop(self, average_takeoff_points_teleop):
+        """
+        Sets the average_takeoff_points_teleop of this EventInsights2017.
+        Average takeoff points scored during teleop.
+
+        :param average_takeoff_points_teleop: The average_takeoff_points_teleop of this EventInsights2017.
+        :type: float
+        """
+        if average_takeoff_points_teleop is None:
+            raise ValueError("Invalid value for `average_takeoff_points_teleop`, must not be `None`")
+
+        self._average_takeoff_points_teleop = average_takeoff_points_teleop
+
+    @property
+    def average_win_margin(self):
+        """
+        Gets the average_win_margin of this EventInsights2017.
+        Average margin of victory.
+
+        :return: The average_win_margin of this EventInsights2017.
+        :rtype: float
+        """
+        return self._average_win_margin
+
+    @average_win_margin.setter
+    def average_win_margin(self, average_win_margin):
+        """
+        Sets the average_win_margin of this EventInsights2017.
+        Average margin of victory.
+
+        :param average_win_margin: The average_win_margin of this EventInsights2017.
+        :type: float
+        """
+        if average_win_margin is None:
+            raise ValueError("Invalid value for `average_win_margin`, must not be `None`")
+
+        self._average_win_margin = average_win_margin
+
+    @property
+    def average_win_score(self):
+        """
+        Gets the average_win_score of this EventInsights2017.
+        Average winning score.
+
+        :return: The average_win_score of this EventInsights2017.
+        :rtype: float
+        """
+        return self._average_win_score
+
+    @average_win_score.setter
+    def average_win_score(self, average_win_score):
+        """
+        Sets the average_win_score of this EventInsights2017.
+        Average winning score.
+
+        :param average_win_score: The average_win_score of this EventInsights2017.
+        :type: float
+        """
+        if average_win_score is None:
+            raise ValueError("Invalid value for `average_win_score`, must not be `None`")
+
+        self._average_win_score = average_win_score
+
+    @property
+    def high_kpa(self):
+        """
+        Gets the high_kpa of this EventInsights2017.
+        An array with three values, kPa scored, match key from the match with the high kPa, and the name of the match
+
+        :return: The high_kpa of this EventInsights2017.
+        :rtype: list[str]
+        """
+        return self._high_kpa
+
+    @high_kpa.setter
+    def high_kpa(self, high_kpa):
+        """
+        Sets the high_kpa of this EventInsights2017.
+        An array with three values, kPa scored, match key from the match with the high kPa, and the name of the match
+
+        :param high_kpa: The high_kpa of this EventInsights2017.
+        :type: list[str]
+        """
+        if high_kpa is None:
+            raise ValueError("Invalid value for `high_kpa`, must not be `None`")
+
+        self._high_kpa = high_kpa
+
+    @property
+    def high_score(self):
+        """
+        Gets the high_score of this EventInsights2017.
+        An array with three values, high score, match key from the match with the high score, and the name of the match
+
+        :return: The high_score of this EventInsights2017.
+        :rtype: list[str]
+        """
+        return self._high_score
+
+    @high_score.setter
+    def high_score(self, high_score):
+        """
+        Sets the high_score of this EventInsights2017.
+        An array with three values, high score, match key from the match with the high score, and the name of the match
+
+        :param high_score: The high_score of this EventInsights2017.
+        :type: list[str]
+        """
+        if high_score is None:
+            raise ValueError("Invalid value for `high_score`, must not be `None`")
+
+        self._high_score = high_score
+
+    @property
+    def kpa_achieved(self):
+        """
+        Gets the kpa_achieved of this EventInsights2017.
+        An array with three values, number of times kPa bonus achieved, number of opportunities to bonus, and percentage.
+
+        :return: The kpa_achieved of this EventInsights2017.
+        :rtype: list[float]
+        """
+        return self._kpa_achieved
+
+    @kpa_achieved.setter
+    def kpa_achieved(self, kpa_achieved):
+        """
+        Sets the kpa_achieved of this EventInsights2017.
+        An array with three values, number of times kPa bonus achieved, number of opportunities to bonus, and percentage.
+
+        :param kpa_achieved: The kpa_achieved of this EventInsights2017.
+        :type: list[float]
+        """
+        if kpa_achieved is None:
+            raise ValueError("Invalid value for `kpa_achieved`, must not be `None`")
+
+        self._kpa_achieved = kpa_achieved
+
+    @property
+    def mobility_counts(self):
+        """
+        Gets the mobility_counts of this EventInsights2017.
+        An array with three values, number of times mobility bonus achieved, number of opportunities to bonus, and percentage.
+
+        :return: The mobility_counts of this EventInsights2017.
+        :rtype: list[float]
+        """
+        return self._mobility_counts
+
+    @mobility_counts.setter
+    def mobility_counts(self, mobility_counts):
+        """
+        Sets the mobility_counts of this EventInsights2017.
+        An array with three values, number of times mobility bonus achieved, number of opportunities to bonus, and percentage.
+
+        :param mobility_counts: The mobility_counts of this EventInsights2017.
+        :type: list[float]
+        """
+        if mobility_counts is None:
+            raise ValueError("Invalid value for `mobility_counts`, must not be `None`")
+
+        self._mobility_counts = mobility_counts
+
+    @property
+    def rotor_1_engaged(self):
+        """
+        Gets the rotor_1_engaged of this EventInsights2017.
+        An array with three values, number of times rotor 1 engaged, number of opportunities to engage, and percentage.
+
+        :return: The rotor_1_engaged of this EventInsights2017.
+        :rtype: list[float]
+        """
+        return self._rotor_1_engaged
+
+    @rotor_1_engaged.setter
+    def rotor_1_engaged(self, rotor_1_engaged):
+        """
+        Sets the rotor_1_engaged of this EventInsights2017.
+        An array with three values, number of times rotor 1 engaged, number of opportunities to engage, and percentage.
+
+        :param rotor_1_engaged: The rotor_1_engaged of this EventInsights2017.
+        :type: list[float]
+        """
+        if rotor_1_engaged is None:
+            raise ValueError("Invalid value for `rotor_1_engaged`, must not be `None`")
+
+        self._rotor_1_engaged = rotor_1_engaged
+
+    @property
+    def rotor_1_engaged_auto(self):
+        """
+        Gets the rotor_1_engaged_auto of this EventInsights2017.
+        An array with three values, number of times rotor 1 engaged in auto, number of opportunities to engage in auto, and percentage.
+
+        :return: The rotor_1_engaged_auto of this EventInsights2017.
+        :rtype: list[float]
+        """
+        return self._rotor_1_engaged_auto
+
+    @rotor_1_engaged_auto.setter
+    def rotor_1_engaged_auto(self, rotor_1_engaged_auto):
+        """
+        Sets the rotor_1_engaged_auto of this EventInsights2017.
+        An array with three values, number of times rotor 1 engaged in auto, number of opportunities to engage in auto, and percentage.
+
+        :param rotor_1_engaged_auto: The rotor_1_engaged_auto of this EventInsights2017.
+        :type: list[float]
+        """
+        if rotor_1_engaged_auto is None:
+            raise ValueError("Invalid value for `rotor_1_engaged_auto`, must not be `None`")
+
+        self._rotor_1_engaged_auto = rotor_1_engaged_auto
+
+    @property
+    def rotor_2_engaged(self):
+        """
+        Gets the rotor_2_engaged of this EventInsights2017.
+        An array with three values, number of times rotor 2 engaged, number of opportunities to engage, and percentage.
+
+        :return: The rotor_2_engaged of this EventInsights2017.
+        :rtype: list[float]
+        """
+        return self._rotor_2_engaged
+
+    @rotor_2_engaged.setter
+    def rotor_2_engaged(self, rotor_2_engaged):
+        """
+        Sets the rotor_2_engaged of this EventInsights2017.
+        An array with three values, number of times rotor 2 engaged, number of opportunities to engage, and percentage.
+
+        :param rotor_2_engaged: The rotor_2_engaged of this EventInsights2017.
+        :type: list[float]
+        """
+        if rotor_2_engaged is None:
+            raise ValueError("Invalid value for `rotor_2_engaged`, must not be `None`")
+
+        self._rotor_2_engaged = rotor_2_engaged
+
+    @property
+    def rotor_2_engaged_auto(self):
+        """
+        Gets the rotor_2_engaged_auto of this EventInsights2017.
+        An array with three values, number of times rotor 2 engaged in auto, number of opportunities to engage in auto, and percentage.
+
+        :return: The rotor_2_engaged_auto of this EventInsights2017.
+        :rtype: list[float]
+        """
+        return self._rotor_2_engaged_auto
+
+    @rotor_2_engaged_auto.setter
+    def rotor_2_engaged_auto(self, rotor_2_engaged_auto):
+        """
+        Sets the rotor_2_engaged_auto of this EventInsights2017.
+        An array with three values, number of times rotor 2 engaged in auto, number of opportunities to engage in auto, and percentage.
+
+        :param rotor_2_engaged_auto: The rotor_2_engaged_auto of this EventInsights2017.
+        :type: list[float]
+        """
+        if rotor_2_engaged_auto is None:
+            raise ValueError("Invalid value for `rotor_2_engaged_auto`, must not be `None`")
+
+        self._rotor_2_engaged_auto = rotor_2_engaged_auto
+
+    @property
+    def rotor_3_engaged(self):
+        """
+        Gets the rotor_3_engaged of this EventInsights2017.
+        An array with three values, number of times rotor 3 engaged, number of opportunities to engage, and percentage.
+
+        :return: The rotor_3_engaged of this EventInsights2017.
+        :rtype: list[float]
+        """
+        return self._rotor_3_engaged
+
+    @rotor_3_engaged.setter
+    def rotor_3_engaged(self, rotor_3_engaged):
+        """
+        Sets the rotor_3_engaged of this EventInsights2017.
+        An array with three values, number of times rotor 3 engaged, number of opportunities to engage, and percentage.
+
+        :param rotor_3_engaged: The rotor_3_engaged of this EventInsights2017.
+        :type: list[float]
+        """
+        if rotor_3_engaged is None:
+            raise ValueError("Invalid value for `rotor_3_engaged`, must not be `None`")
+
+        self._rotor_3_engaged = rotor_3_engaged
+
+    @property
+    def rotor_4_engaged(self):
+        """
+        Gets the rotor_4_engaged of this EventInsights2017.
+        An array with three values, number of times rotor 4 engaged, number of opportunities to engage, and percentage.
+
+        :return: The rotor_4_engaged of this EventInsights2017.
+        :rtype: list[float]
+        """
+        return self._rotor_4_engaged
+
+    @rotor_4_engaged.setter
+    def rotor_4_engaged(self, rotor_4_engaged):
+        """
+        Sets the rotor_4_engaged of this EventInsights2017.
+        An array with three values, number of times rotor 4 engaged, number of opportunities to engage, and percentage.
+
+        :param rotor_4_engaged: The rotor_4_engaged of this EventInsights2017.
+        :type: list[float]
+        """
+        if rotor_4_engaged is None:
+            raise ValueError("Invalid value for `rotor_4_engaged`, must not be `None`")
+
+        self._rotor_4_engaged = rotor_4_engaged
+
+    @property
+    def takeoff_counts(self):
+        """
+        Gets the takeoff_counts of this EventInsights2017.
+        An array with three values, number of times takeoff was counted, number of opportunities to takeoff, and percentage.
+
+        :return: The takeoff_counts of this EventInsights2017.
+        :rtype: list[float]
+        """
+        return self._takeoff_counts
+
+    @takeoff_counts.setter
+    def takeoff_counts(self, takeoff_counts):
+        """
+        Sets the takeoff_counts of this EventInsights2017.
+        An array with three values, number of times takeoff was counted, number of opportunities to takeoff, and percentage.
+
+        :param takeoff_counts: The takeoff_counts of this EventInsights2017.
+        :type: list[float]
+        """
+        if takeoff_counts is None:
+            raise ValueError("Invalid value for `takeoff_counts`, must not be `None`")
+
+        self._takeoff_counts = takeoff_counts
+
+    @property
+    def unicorn_matches(self):
+        """
+        Gets the unicorn_matches of this EventInsights2017.
+        An array with three values, number of times a unicorn match (Win + kPa & Rotor Bonuses) occured, number of opportunities to have a unicorn match, and percentage.
+
+        :return: The unicorn_matches of this EventInsights2017.
+        :rtype: list[float]
+        """
+        return self._unicorn_matches
+
+    @unicorn_matches.setter
+    def unicorn_matches(self, unicorn_matches):
+        """
+        Sets the unicorn_matches of this EventInsights2017.
+        An array with three values, number of times a unicorn match (Win + kPa & Rotor Bonuses) occured, number of opportunities to have a unicorn match, and percentage.
+
+        :param unicorn_matches: The unicorn_matches of this EventInsights2017.
+        :type: list[float]
+        """
+        if unicorn_matches is None:
+            raise ValueError("Invalid value for `unicorn_matches`, must not be `None`")
+
+        self._unicorn_matches = unicorn_matches
 
     def to_dict(self):
         """

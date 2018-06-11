@@ -783,7 +783,7 @@ class EventApi(object):
             for asynchronous request. (optional)
         :param str event_key: TBA Event Key, eg `2016nytr` (required)
         :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
-        :return: object
+        :return: EventInsights
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -809,7 +809,7 @@ class EventApi(object):
             for asynchronous request. (optional)
         :param str event_key: TBA Event Key, eg `2016nytr` (required)
         :param str if_modified_since: Value of the `Last-Modified` header in the most recently cached response by the client.
-        :return: object
+        :return: EventInsights
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -864,7 +864,7 @@ class EventApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='object',
+                                        response_type='EventInsights',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
