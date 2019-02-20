@@ -49,6 +49,8 @@ from .match_score_breakdown_2017 import MatchScoreBreakdown2017
 from .match_score_breakdown_2017_alliance import MatchScoreBreakdown2017Alliance
 from .match_score_breakdown_2018 import MatchScoreBreakdown2018
 from .match_score_breakdown_2018_alliance import MatchScoreBreakdown2018Alliance
+from .match_score_breakdown_2019 import MatchScoreBreakdown2019
+from .match_score_breakdown_2019_alliance import MatchScoreBreakdown2019Alliance
 from .match_simple import MatchSimple
 from .match_simple_alliances import MatchSimpleAlliances
 from .match_timeseries_2018 import MatchTimeseries2018
